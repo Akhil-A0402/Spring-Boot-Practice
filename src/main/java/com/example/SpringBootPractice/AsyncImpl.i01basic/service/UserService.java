@@ -10,4 +10,9 @@ public class UserService {
     public void asyncMethod() {
         System.out.println("Thread "+Thread.currentThread().getName());
     }
+
+    @Async("myThreadPoolExecutor")
+    public void asyncMethod2() {
+        System.out.println("Thread UseCase 3 ˳- "+Thread.currentThread().getName());
+    }
 }
