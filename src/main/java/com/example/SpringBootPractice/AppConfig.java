@@ -28,4 +28,23 @@ public class AppConfig {
         return poolTaskExecutor;
     }
 
+
+    /*
+    Output when the simpleAsync API is called:
+    -----------------------------------
+    Inside getMethod:
+    Thread Thread use-case - 2 - 1
+    Inside getMethod:
+    Thread Thread use-case - 2 - 2
+    Inside getMethod:
+    Thread Thread use-case - 2 - 1
+    Inside getMethod:
+    Thread Thread use-case - 2 - 2
+    Inside getMethod:
+    Thread Thread use-case - 2 - 1
+    Inside getMethod:
+    Thread Thread use-case - 2 - 2
+    -----------------------------------
+    */
+
 }
