@@ -13,7 +13,12 @@ public class SimpleController {
 
     @Autowired
     UserService userService;
+    // Use case 1: When we dont specify any thread pool task executor, spring creates ThreadPoolTaskExecutor of
+    // default size 8 min pool size, max pool = Integer.MAX_VALUE, queue of Integer.MAX_VALUE
 
+
+    // reference: AsyncExecutionInterceptor => getDefaultExecutor
+    // ThreadPoolTaskExecutor => initializeExecutor
     @GetMapping("/simpleAsync")
     public String getSimpleAsyncMethod() {
         System.out.println("Inside getMethod:");
