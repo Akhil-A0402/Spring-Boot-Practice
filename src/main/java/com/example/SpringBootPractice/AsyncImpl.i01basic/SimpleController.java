@@ -25,4 +25,11 @@ public class SimpleController {
         userService.asyncMethod();
         return "AsyncMethod Called";
     }
+
+    @GetMapping("/simpleAsyncUseCase3")
+    public String getSimpleAsyncMethod2() {
+        System.out.println("Inside getMethod:");
+        userService.asyncMethod2();
+        return "AsyncMethod Called";
+    }
 }
